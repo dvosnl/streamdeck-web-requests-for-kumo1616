@@ -2,3 +2,31 @@
 *.streamDeckPlugin
 DistributionTool.exe
 node_modules/
+# Build and distribution
+dist/
+build/
+
+# IDE and Editor
+.vs/
+.vscode/
+*.code-workspace
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local tools
+.claude/
+streamdeck/
+
+# Dependencies
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Logs
+*.log
+npm-debug.log*
