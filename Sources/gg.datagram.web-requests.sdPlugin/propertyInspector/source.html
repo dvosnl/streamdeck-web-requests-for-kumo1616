@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
+  <meta name=apple-mobile-web-app-capable content=yes>
+  <meta name=apple-mobile-web-app-status-bar-style content=black>
+  <title>gg.datagram.web-requests.source</title>
+  <link rel="stylesheet" href="css/pi.css">
+</head>
+
+<body>
+  <div class="sdpi-wrapper">
+    <div class="sdpi-heading">Source Trigger</div>
+    
+    <div class="sdpi-item">
+      <div class="sdpi-item-label" data-localize="SourceID">Source ID</div>
+      <input class="sdpi-item-value" type="text" id="sourceId" value="" placeholder="e.g. 1, 2, 3..." required>
+    </div>
+
+    <div class="sdpi-item">
+      <div class="sdpi-item-label" data-localize="URL">URL</div>
+      <input class="sdpi-item-value" type="text" id="url" value="" placeholder="http://device/api?dest={dest}&src={src}" required>
+    </div>
+
+    <div class="sdpi-item">
+      <div class="sdpi-item-label" data-localize="Method">Method</div>
+      <select class="sdpi-item-value select" id="method" required>
+        <option value="" disabled selected hidden></option>
+        <option value="POST">POST</option>
+        <option value="GET">GET</option>
+        <option value="HEAD">HEAD</option>
+        <option value="PUT">PUT</option>
+        <option value="PATCH">PATCH</option>
+        <option value="DELETE">DELETE</option>
+      </select>
+    </div>
+
+    <div class="sdpi-item">
+      <div class="sdpi-item-label" data-localize="ContentType">Content Type</div>
+      <select class="sdpi-item-value select" id="contentType" required>
+        <option value="" selected></option>
+        <option value="application/json">application/json</option>
+        <option value="application/xml">application/xml</option>
+        <option value="text/plain">text/plain</option>
+        <option value="text/html">text/html</option>
+      </select>
+    </div>
+
+    <div type="textarea" class="sdpi-item" title="Enter each HTTP header on a separate line, with the name and value separated by a colon">
+      <div class="sdpi-item-label" data-localize="Headers">Headers</div>
+      <span class="sdpi-item-value textarea">
+        <textarea type="textarea" rows="1" id="headers" placeholder="Authorization: Bearer [token]"></textarea>
+      </span>
+    </div>
+
+    <div type="textarea" class="sdpi-item">
+      <div class="sdpi-item-label" data-localize="Body">Body</div>
+      <span class="sdpi-item-value textarea">
+        <textarea type="textarea" rows="3" id="body" placeholder="Use {dest} and {src} placeholders"></textarea>
+      </span>
+    </div>
+
+    <div class="sdpi-item">
+      <details class="message info">
+        <summary>Placeholder Usage</summary>
+        <p>Use placeholders in URL and Body fields:</p>
+        <ul>
+          <li><code>{dest}</code> - Replaced with selected Destination ID</li>
+          <li><code>{src}</code> - Replaced with this Source ID</li>
+        </ul>
+        <p><strong>Example URL:</strong><br>
+        <code>http://device/api/route?dest={dest}&src={src}</code></p>
+        <p><strong>Note:</strong> A destination must be selected before triggering a source.</p>
+      </details>
+    </div>
+  </div>
+
+  <div class="sdpi-info-label hidden" style="top: -1000;" value=""></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/common_pi.js"></script>
+  <script src="js/index_pi.js"></script>
+</body>
+
+</html>

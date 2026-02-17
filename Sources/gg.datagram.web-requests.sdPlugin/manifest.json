@@ -1,4 +1,5 @@
 {
+  "UUID": "gg.datagram.web-requests",
   "Actions": [
     {
       "UUID": "gg.datagram.web-requests.http",
@@ -23,6 +24,30 @@
           "Image": "images/websocket_key"
         }
       ]
+    },
+    {
+      "UUID": "gg.datagram.web-requests.destination",
+      "Name": "Destination Select",
+      "Tooltip": "Select a destination for routing. Does not send HTTP request.",
+      "PropertyInspectorPath": "propertyInspector/destination.html",
+      "Icon": "images/destination_action",
+      "States": [
+        {
+          "Image": "images/destination_key"
+        }
+      ]
+    },
+    {
+      "UUID": "gg.datagram.web-requests.source",
+      "Name": "Source Trigger",
+      "Tooltip": "Trigger a source with HTTP request using {dest} and {src} placeholders.",
+      "PropertyInspectorPath": "propertyInspector/source.html",
+      "Icon": "images/source_action",
+      "States": [
+        {
+          "Image": "images/source_key"
+        }
+      ]
     }
   ],
   "SDKVersion": 2,
@@ -34,19 +59,18 @@
   "Category": "Web Requests",
   "CategoryIcon": "images/category",
   "URL": "https://github.com/data-enabler/streamdeck-web-requests",
-  "Version": "0.1.0",
+  "Version": "0.1.0.0",
   "OS": [
     {
-        "Platform": "mac",
-        "MinimumVersion" : "10.11"
+      "Platform": "mac",
+      "MinimumVersion": "10.11"
     },
     {
-        "Platform": "windows",
-        "MinimumVersion" : "10"
+      "Platform": "windows",
+      "MinimumVersion": "10"
     }
   ],
-  "Software":
-    {
-        "MinimumVersion" : "4.2"
-    }
+  "Software": {
+    "MinimumVersion": "6.6"
+  }
 }

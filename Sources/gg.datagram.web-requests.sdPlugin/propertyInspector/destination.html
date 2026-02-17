@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
+  <meta name=apple-mobile-web-app-capable content=yes>
+  <meta name=apple-mobile-web-app-status-bar-style content=black>
+  <title>gg.datagram.web-requests.destination</title>
+  <link rel="stylesheet" href="css/pi.css">
+</head>
+
+<body>
+  <div class="sdpi-wrapper">
+    <div class="sdpi-heading">Destination Select</div>
+    
+    <div class="sdpi-item">
+      <div class="sdpi-item-label" data-localize="DestinationID">Destination ID</div>
+      <input class="sdpi-item-value" type="text" id="destinationId" value="" placeholder="e.g. 1, 2, 3..." required>
+    </div>
+
+    <div class="sdpi-item">
+      <details class="message info">
+        <summary>About Destination Select</summary>
+        <p>This action sets the destination for routing. When pressed:</p>
+        <ul>
+          <li>The destination ID is stored globally</li>
+          <li>No HTTP request is sent</li>
+          <li>Source buttons will blink to indicate they are ready</li>
+          <li>The selected destination remains active until another is chosen</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+
+  <div class="sdpi-info-label hidden" style="top: -1000;" value=""></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/common_pi.js"></script>
+  <script src="js/index_pi.js"></script>
+</body>
+
+</html>
